@@ -16,7 +16,7 @@ const MenuSelectedContext = createContext<MenuSelected>({
 
 // Додайте тип MenuAction
 type MenuAction = {
-  onSelectedMenu: (args: any[]) => void;
+  onSelectedMenu: (menu: SelectedMenu) => void;
 };
 
 const MenuActionContext = createContext<MenuAction>({
@@ -28,9 +28,8 @@ type PropsProvider = {
 };
 
 type SelectedMenu = {
-  id: string;
-  title: string;
-} | {};
+  id?: string;
+};
 
 function MenuProvider({ children }: PropsProvider) {
   // Додати тип для SelectedMenu він повинен містити { id }
