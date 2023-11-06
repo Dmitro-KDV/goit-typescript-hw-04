@@ -28,7 +28,7 @@ type PropsProvider = {
 };
 
 type SelectedMenu = {
-  id?: MenuIds;
+  id: MenuIds;
 };
 
 function MenuProvider({ children }: PropsProvider) {
